@@ -40,3 +40,24 @@ exports.addProduct=asyncHandler(async (req,res,next) => {
     })
 
 })
+
+
+// @desc Update a products
+// @route PATCH /api/v1/products/:id
+// @access private
+exports.updateProduct=asyncHandler(async (req,res,next) => {
+    const {name,price}=req.body
+    const product=await Product.findById(req.params.id)
+    if(!product) {
+        return next(new ErrorResponse(404,`Product with ID:${req.params.id} not found!`))
+    }
+    if(name) product.name=name
+    if(price) product.price=price
+
+    await product.save()
+
+    res.status(200).send({
+        success: true,
+        data: product
+    })
+})

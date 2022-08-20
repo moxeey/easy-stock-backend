@@ -20,7 +20,6 @@ describe('Business APIs',() => {
                     ])
                 )
             })
-
     });
     it('GET /business/id --> get a specific business by ID',() => {
         return request(app)
