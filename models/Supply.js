@@ -7,13 +7,13 @@ const SupplySchema=mongoose.Schema({
         default: 0
     },
     supplier: {
-        type: mongoose.Schema.OnjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Supplier',
         required: [true,'supplier is required']
 
     },
     shop: {
-        type: mongoose.Schema.OnjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Shop',
         required: [true,'shop is required']
 

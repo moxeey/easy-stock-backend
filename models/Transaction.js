@@ -7,7 +7,7 @@ const TransactionSchema=mongoose.Schema({
         required: true
     },
     shop: {
-        type: mongoose.Schema.OnjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Shop'
     },
     user: {

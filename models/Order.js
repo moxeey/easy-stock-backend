@@ -7,11 +7,11 @@ const OrderSchema=mongoose.Schema({
         default: 0
     },
     customer: {
-        type: mongoose.Schema.OnjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Customer'
     },
     shop: {
-        type: mongoose.Schema.OnjectId,
+        type: mongoose.Schema.ObjectId,
         ref: 'Shop'
     },
     products: {
