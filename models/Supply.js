@@ -33,4 +33,4 @@ const SupplySchema=mongoose.Schema({
     }
 })
 
-module.exports=mongoose.Model('Supply',SupplySchema)
+module.exports=mongoose.model('Supply',SupplySchema)
