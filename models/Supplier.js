@@ -6,7 +6,6 @@ const SupplierSchema=mongoose.Schema({
         type: String,
         required: [true,'Please add a name'],
         minlength: [3,'Name cannot be less than 3 characters'],
-
     },
     phone: {
         type: String,
@@ -19,6 +18,11 @@ const SupplierSchema=mongoose.Schema({
             "Enter a valid email address",
         ],
     },
+    shop: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Shop',
+        required: [true,'Shop is required']
+    }
 })
 
 // exporting schema model

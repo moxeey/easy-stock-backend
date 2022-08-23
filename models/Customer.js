@@ -18,6 +18,11 @@ const CustomerSchema=mongoose.Schema({
             "Enter a valid email address",
         ],
     },
+    shop: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Shop',
+        required: [true,'Shop is required']
+    }
 
 })
 

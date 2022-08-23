@@ -6,6 +6,10 @@ const SupplySchema=mongoose.Schema({
         type: Number,
         default: 0
     },
+    paid: {
+        type: Number,
+        default: 0
+    },
     supplier: {
         type: mongoose.Schema.ObjectId,
         ref: 'Supplier',
@@ -29,7 +33,7 @@ const SupplySchema=mongoose.Schema({
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
-        required: true
+        // required: true
     }
 })
 

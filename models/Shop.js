@@ -17,10 +17,10 @@ const ShopSchema=mongoose.Schema({
         required: [true,'Shop phone number is required'],
         minlength: [11,'valid phone number is required']
     },
-    email: {
-        type: String,
-        required: [true,'Shop email is required'],
-    },
+    // email: {
+    //     type: String,
+    //     required: [true,'Shop email is required'],
+    // },
     address: {
         type: String,
         required: [true,'Shop address is required'],
@@ -55,7 +55,7 @@ const ShopSchema=mongoose.Schema({
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
-        required: true
+        // required: true
     }
 })
 

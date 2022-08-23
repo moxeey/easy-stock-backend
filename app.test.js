@@ -3,6 +3,7 @@ const app=require('./app')
 const assert=require('assert')
 // request = request(`http://localhost:${process.env.PORT}`)
 
+
 describe('Business APIs',() => {
     it('GET /business --> Get all businesses',() => {
         return request(app)
@@ -192,6 +193,7 @@ describe('suppliers APIs',() => {
                             expect.objectContaining({
                                 name: expect.any(String),
                                 phone: expect.any(String),
+                                shop: expect.any(Object),
                                 supplies: expect.any(Array),
                                 transactions: expect.any(Array)
                             })

@@ -13,12 +13,13 @@ const TransactionSchema=mongoose.Schema({
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
-        required: true
+        // required: true
     },
     for: {
         type: String,
         enum: ['Order','Supply']
     },
+    // Order or Supply ID
     ref: {
         type: mongoose.Schema.ObjectId
     },

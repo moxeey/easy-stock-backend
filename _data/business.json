@@ -1,0 +1,23 @@
+[
+  {
+    "_d": "62f520005547c81135d54001",
+    "name": "Business 1",
+    "phone": "08021009231",
+    "email": "business1@gmail.com",
+    "website": "https://hello.com"
+  },
+  {
+    "_d": "62f520005547c81135d54002",
+    "name": "Business 2",
+    "phone": "08021009232",
+    "email": "business2@gmail.com",
+    "website": "https://hello.com"
+  },
+  {
+    "_d": "62f520005547c81135d54003",
+    "name": "Business 3",
+    "phone": "08021009233",
+    "email": "business3@gmail.com",
+    "website": "https://hello.com"
+  }
+]

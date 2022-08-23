@@ -6,6 +6,10 @@ const OrderSchema=mongoose.Schema({
         type: Number,
         default: 0
     },
+    paid: {
+        type: Number,
+        default: 0
+    },
     customer: {
         type: mongoose.Schema.ObjectId,
         ref: 'Customer'
@@ -25,7 +29,7 @@ const OrderSchema=mongoose.Schema({
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
-        required: true
+        // required: true
     }
 })
 

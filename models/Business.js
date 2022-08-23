@@ -9,6 +9,7 @@ const BusinessSchema=mongoose.Schema({
     },
     phone: {
         type: String,
+        unique: [true,'Phone number already used by another business'],
         required: [true,'Business phone number is required'],
         minlength: [11,'valid phone number is required']
     },
