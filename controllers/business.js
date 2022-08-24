@@ -8,7 +8,6 @@ const ErrorResponse=require("../utils/ErrorResponse");
 // @access private
 exports.getBusinesses=asyncHandler(async (req,res,next) => {
     const businesses=await Business.find()
-    console.log(Business.modelName)
     res.status(200).send({
         success: true,
         data: businesses
