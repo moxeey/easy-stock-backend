@@ -66,7 +66,7 @@ describe('Business APIs',() => {
         return request(app)
             .post('/business')
             .send({name: 243,phone: "08099098767"})
-            .expect(422)
+            .expect(400)
     });
     it('PATCH /business/id -->  Update business contact (phone, email, website)',() => {
         return request(app)
@@ -230,7 +230,6 @@ describe('suppliers APIs',() => {
                         supplies: expect.any(Array),
                         transactions: expect.any(Array)
                     })
-
                 )
             })
     });

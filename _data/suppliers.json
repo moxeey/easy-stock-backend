@@ -1,20 +1,20 @@
 [
   {
-    "_d": "62f520005547c81135d54701",
+    "_id": "62f520005547c81135d54701",
     "name": "Sani Ibrahim",
     "phone": "08021009231",
     "email": "sani@gmail.com",
     "shop": "62f520005547c81135d54001"
   },
   {
-    "_d": "62f520005547c81135d54702",
+    "_id": "62f520005547c81135d54702",
     "name": "Muhd Musa",
     "phone": "08021009232",
     "email": "muhd@gmail.com",
     "shop": "62f520005547c81135d54002"
   },
   {
-    "_d": "62f520005547c81135d54703",
+    "_id": "62f520005547c81135d54703",
     "name": "Kabiru Sani",
     "phone": "08021009233",
     "email": "kabiru@gmail.com",

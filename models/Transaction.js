@@ -25,7 +25,7 @@ const TransactionSchema=mongoose.Schema({
     },
     remark: {
         type: String,
-        default: Date.now()+this.for
+        default: ''
     },
     createdAt: {
         type: Date,

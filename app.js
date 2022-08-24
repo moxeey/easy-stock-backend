@@ -24,22 +24,23 @@ const transactions=require('./routes/transactions')
 // Initialized the app
 const app=express()
 
-// route request to their respective router
-app.use('/products',products)
-app.use('/customers',customers)
-app.use('/business',business)
-app.use('/shops',shops)
-app.use('/categories',categories)
-app.use('/suppliers',suppliers)
-app.use('/supplies',supplies)
-app.use('/transactions',transactions)
-app.use('/orders',orders)
-
 // Middlewares
 // JSON parser
 app.use(express.json())
 // Morgan:Logger
 app.use(morgan('combined'))
+
+// route request to their respective router
+app.use('/api/v1/products',products)
+app.use('/api/v1/customers',customers)
+app.use('/api/v1/business',business)
+app.use('/api/v1/shops',shops)
+app.use('/api/v1/categories',categories)
+app.use('/api/v1/suppliers',suppliers)
+app.use('/api/v1/supplies',supplies)
+app.use('/api/v1/transactions',transactions)
+app.use('/api/v1/orders',orders)
+
 
 // Custom Error Handler
 app.use(errorHandler)
