@@ -9,7 +9,7 @@ const CustomerSchema=mongoose.Schema({
     },
     phone: {
         type: String,
-        required: ['Please add a phone number'],
+        required: [true,'Please add a phone number'],
     },
     email: {
         type: String,

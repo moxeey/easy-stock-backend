@@ -27,8 +27,11 @@ const app=express()
 // Middlewares
 // JSON parser
 app.use(express.json())
+
 // Morgan:Logger
-app.use(morgan('combined'))
+app.use(morgan('dev'))
+
+console.log(process.env.MONGO_URL)
 
 // route request to their respective router
 app.use('/api/v1/products',products)
@@ -40,7 +43,6 @@ app.use('/api/v1/suppliers',suppliers)
 app.use('/api/v1/supplies',supplies)
 app.use('/api/v1/transactions',transactions)
 app.use('/api/v1/orders',orders)
-
 
 // Custom Error Handler
 app.use(errorHandler)

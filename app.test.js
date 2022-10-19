@@ -3,7 +3,6 @@ const app=require('./app')
 const assert=require('assert')
 // request = request(`http://localhost:${process.env.PORT}`)
 
-
 describe('Business APIs',() => {
     it('GET /business --> Get all businesses',() => {
         return request(app)
@@ -22,6 +21,7 @@ describe('Business APIs',() => {
                 )
             })
     });
+
     it('GET /business/id --> get a specific business by ID',() => {
         return request(app)
             .get('/api/v1/business/62f520005547c81135d54002')
@@ -189,6 +189,8 @@ describe('Business APIs',() => {
 
 });
 describe('suppliers APIs',() => {
+    return
+
     it('GET /suppliers',() => {
         return request(app).get('/api/v1/suppliers')
             .expect(200)
@@ -278,6 +280,8 @@ describe('suppliers APIs',() => {
 
 });
 describe('Supplies APIs',() => {
+    return
+
     it('GET /supplies',() => {
         return request(app).get('/api/v1/supplies')
             .expect(200)
@@ -375,6 +379,8 @@ describe('Supplies APIs',() => {
     });
 });
 describe('Shops APIs',() => {
+    return
+
     it('GET /shops',() => {
         return request(app).get('/api/v1/shops')
             .expect(200)
@@ -490,6 +496,8 @@ describe('Shops APIs',() => {
     });
 });
 describe('Categories APIs',() => {
+    return
+
     it('GET /categories',() => {
         return request(app).get('/api/v1/categories')
             .expect(200)
@@ -562,6 +570,8 @@ describe('Categories APIs',() => {
     });
 });
 describe('Products APIs',() => {
+    return
+
     it('GET /products',() => {
         return request(app).get('/api/v1/products')
             .expect(200)
@@ -650,6 +660,8 @@ describe('Products APIs',() => {
     });
 });
 describe('Customers APIs',() => {
+    return
+
     it('GET /customers',() => {
         return request(app).get('/api/v1/customers')
             .expect(200)
@@ -733,6 +745,8 @@ describe('Customers APIs',() => {
     });
 });
 describe('Orders APIs',() => {
+    return
+
     it('GET /orders',() => {
         return request(app).get('/api/v1/orders')
             .expect(200)
@@ -857,6 +871,8 @@ describe('Orders APIs',() => {
     });
 });
 describe('Transactions APIs',() => {
+    return
+
     it('GET /transactions',() => {
         return request(app).get('/api/v1/transactions')
             .expect(200)
