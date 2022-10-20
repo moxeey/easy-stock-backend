@@ -57,3 +57,20 @@ exports.updateSupplier=asyncHandler(async (req,res,next) => {
         data: supplier
     })
 })
+
+// @desc Delete a supplier
+// @route DELETE /api/v1/suppliers/id
+// @access private
+exports.deleteSupplier=asyncHandler(async (req,res,next) => {
+
+    const supplier=await Supplier.findOne({_id: req.params.id})
+    if(!supplier) {
+        return next(new ErrorResponse(404,'Supplier not found'))
+    }
+    await supplier.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

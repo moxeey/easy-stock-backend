@@ -55,3 +55,20 @@ exports.updateTransaction=asyncHandler(async (req,res,next) => {
         data: transaction
     })
 })
+
+// @desc Delete a transaction
+// @route DELETE /api/v1/transactions/id
+// @access private
+exports.deleteTransaction=asyncHandler(async (req,res,next) => {
+
+    const transaction=await Transaction.findOne({_id: req.params.id})
+    if(!transaction) {
+        return next(new ErrorResponse(404,'Transaction not found'))
+    }
+    await transaction.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

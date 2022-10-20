@@ -57,3 +57,20 @@ exports.updateCustomer=asyncHandler(async (req,res,next) => {
         data: customer
     })
 })
+
+// @desc Delete a customer
+// @route DELETE /api/v1/customers/id
+// @access private
+exports.deleteCustomer=asyncHandler(async (req,res,next) => {
+
+    const customer=await Customer.findOne({_id: req.params.id})
+    if(!customer) {
+        return next(new ErrorResponse(404,'Customer not found'))
+    }
+    await customer.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

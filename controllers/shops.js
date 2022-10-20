@@ -60,3 +60,20 @@ exports.updateShop=asyncHandler(async (req,res,next) => {
         data: shop
     })
 })
+
+// @desc Delete a shop
+// @route DELETE /api/v1/shops/id
+// @access private
+exports.deleteShop=asyncHandler(async (req,res,next) => {
+
+    const shop=await Shop.findOne({_id: req.params.id})
+    if(!shop) {
+        return next(new ErrorResponse(404,'Shop not found'))
+    }
+    await shop.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

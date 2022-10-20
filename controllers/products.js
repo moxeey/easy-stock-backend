@@ -61,3 +61,20 @@ exports.updateProduct=asyncHandler(async (req,res,next) => {
         data: product
     })
 })
+
+// @desc Delete a product
+// @route DELETE /api/v1/products/id
+// @access private
+exports.deleteProduct=asyncHandler(async (req,res,next) => {
+
+    const product=await Product.findOne({_id: req.params.id})
+    if(!product) {
+        return next(new ErrorResponse(404,'Product not found'))
+    }
+    await product.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

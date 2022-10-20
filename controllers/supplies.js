@@ -59,3 +59,20 @@ exports.updateOrder=asyncHandler(async (req,res,next) => {
         data: supply
     })
 })
+
+// @desc Delete a supply
+// @route DELETE /api/v1/supplies/id
+// @access private
+exports.deleteSupply=asyncHandler(async (req,res,next) => {
+
+    const supply=await Supply.findOne({_id: req.params.id})
+    if(!supply) {
+        return next(new ErrorResponse(404,'Supply not found'))
+    }
+    await supply.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

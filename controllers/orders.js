@@ -59,3 +59,20 @@ exports.updateOrder=asyncHandler(async (req,res,next) => {
         data: order
     })
 })
+
+// @desc Delete a order
+// @route DELETE /api/v1/orders/id
+// @access private
+exports.deleteOrder=asyncHandler(async (req,res,next) => {
+
+    const order=await Order.findOne({_id: req.params.id})
+    if(!order) {
+        return next(new ErrorResponse(404,'Order not found'))
+    }
+    await order.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
+    })
+
+})

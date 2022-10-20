@@ -20,6 +20,9 @@ exports.getBusinesses=asyncHandler(async (req,res,next) => {
 // @access private
 exports.getBusiness=asyncHandler(async (req,res,next) => {
     const business=await Business.findById(req.params.id)
+    if(!business) {
+        return next(new ErrorResponse(404,'Business not found'))
+    }
     res.status(200).send({
         success: true,
         data: business
@@ -61,6 +64,23 @@ exports.updateBusiness=asyncHandler(async (req,res,next) => {
     res.status(200).send({
         success: true,
         data: business
+    })
+
+})
+
+// @desc Delete a business
+// @route DELETE /api/v1/business/id
+// @access private
+exports.deleteBusiness=asyncHandler(async (req,res,next) => {
+
+    const business=await Business.findOne({_id: req.params.id})
+    if(!business) {
+        return next(new ErrorResponse(404,'Business not found'))
+    }
+    await business.remove()
+    res.status(200).send({
+        success: true,
+        data: {}
     })
 
 })
