@@ -1,4 +1,3 @@
-const mongoose=require("mongoose");
 const Supplier=require('../models/Supplier')
 const asyncHandler=require("../middlewares/async");
 const ErrorResponse=require("../utils/ErrorResponse");

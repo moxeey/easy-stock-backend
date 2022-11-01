@@ -1,4 +1,3 @@
-const mongoose=require("mongoose");
 const Transaction=require('../models/Transaction')
 const asyncHandler=require("../middlewares/async");
 const ErrorResponse=require("../utils/ErrorResponse");
@@ -14,7 +13,7 @@ exports.getTransactions=asyncHandler(async (req,res,next) => {
     })
 })
 
-// @desc Get single transactions
+// @desc Get single transaction
 // @route GET /api/v1/transactions/:id
 // @access private
 exports.getTransaction=asyncHandler(async (req,res,next) => {

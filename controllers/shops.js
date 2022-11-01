@@ -1,4 +1,3 @@
-const mongoose=require("mongoose");
 const Shop=require('../models/Shop')
 const asyncHandler=require("../middlewares/async");
 const ErrorResponse=require("../utils/ErrorResponse");

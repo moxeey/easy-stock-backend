@@ -1,4 +1,3 @@
-const mongoose=require("mongoose");
 const Category=require('../models/Category')
 const asyncHandler=require("../middlewares/async");
 const ErrorResponse=require("../utils/ErrorResponse");
