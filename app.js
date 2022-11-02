@@ -31,8 +31,6 @@ app.use(express.json())
 // Morgan:Logger
 app.use(morgan('dev'))
 
-console.log(process.env.MONGO_URL)
-
 // route request to their respective router
 app.use('/api/v1/products',products)
 app.use('/api/v1/customers',customers)
