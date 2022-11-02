@@ -1,1 +1,1 @@
-# easy-stock-backend
+# E-Commerce and Inventory API
