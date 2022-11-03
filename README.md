@@ -43,3 +43,7 @@ I am an enthusiastic Backend Engineer with experience building RESTful APIs, wir
 ### System Design
 
 The system is well design in the first place due to the lack of experience I have in building SaaS system. I will be glad to have someone that will guide me design a well structured and scallable version of the intended system. in the furute I want this to be in form of microservices
+
+### Code
+
+This is my first project that I tried to use Test Driven development approach. I find it difficult in the first place, but after going through some articles I were able to write some test.
